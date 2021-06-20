@@ -95,7 +95,7 @@ function Home() {
                     return(
                     <div className={styles.pizzaItem} key={pizza.id}>
                         <Link href={`/${pizza.slug}`}><a className={styles.pizzaImageBox}> 
-                            <img src={pizza.image} className={styles.pizzaImage} alt={'pizza picture'} width={500} height={500}/>
+                            <Image src={pizza.image} className={styles.pizzaImage} alt={'pizza picture'} width={500} height={500}/>
                         </a></Link>
                         <div className={styles.pizzaText}>
                             <p className={styles.pizzaHeader}>{pizza.name}</p>
