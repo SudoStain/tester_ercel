@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/Pizza.module.css'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 export default function slug({pizza, otherPizzas}) {
@@ -10,8 +11,8 @@ export default function slug({pizza, otherPizzas}) {
             <Head>
             <title>{pizza.name}</title>
             </Head>
-            <div className={styles.pizzawrapperLeft}>
-                <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage} />
+             <div className={styles.pizzawrapperLeft}>
+                <Image width={500} height={500}src={pizza.image} alt={pizza.name} className={styles.pizzaImage} />
             </div>
             <div className={styles.PizzawrapperRight}>
                 <div className={styles.pizzaInfo}>
@@ -26,7 +27,7 @@ export default function slug({pizza, otherPizzas}) {
                         return(
                             <div className={styles.otherPizza} key={otherpizza.id}>
                                 <Link href={`/` + otherpizza.slug}><a>
-                                    <img src={otherpizza.image} alt={otherpizza.name} />
+                                    <Image width={500} height={500}src={otherpizza.image} alt={otherpizza.name} />
                                     <p>{otherpizza.name}</p>
                                 </a></Link>
 
